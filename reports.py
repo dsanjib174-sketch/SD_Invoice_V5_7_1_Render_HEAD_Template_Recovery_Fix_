@@ -1,0 +1,10 @@
+from flask import Blueprint, render_template
+reports_bp=Blueprint("reports",__name__)
+@reports_bp.route("/document-register")
+def document_register(): return render_template("reports/document_register.html")
+@reports_bp.route("/ledger")
+def ledger(): return render_template("reports/ledger.html")
+@reports_bp.route("/gst-gsp")
+def gst_gsp(): return render_template("reports/gst_gsp.html")
+@reports_bp.route("/tally-sap")
+def tally_sap(): return render_template("reports/tally_sap.html")
